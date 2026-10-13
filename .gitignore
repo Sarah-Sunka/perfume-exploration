@@ -1,0 +1,10 @@
+# OS clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# If Node.js is added later
+node_modules/
+
+# Secret files (never commit these)
+.env

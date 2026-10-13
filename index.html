@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Épée &amp; Fluide — Parfums de Soi | Artisanal Haute Perfumery</title>
+  <meta name="description" content="Artisanal haute perfumery formulated in Grasse and refined in Paris. Find your signature scent with the scent persona quiz and the 2025 fragrance wardrobe." />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Épée & Fluide — home">
+        <img src="assets/img/logo.png" alt="Épée & Fluide — Parfums de Soi" width="150" height="38" />
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html" aria-current="page">Home</a>
+        <a class="nav-link" href="quiz.html">Scent Quiz</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <span class="status-pill"><span class="dot"></span>Matchmaker Active</span>
+        <button class="icon-btn" type="button" aria-label="Search fragrances" data-search-toggle aria-expanded="false" aria-controls="search-panel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a class="nav-link" href="index.html" aria-current="page">Home</a>
+      <a class="nav-link" href="quiz.html">Scent Quiz</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="search-panel" id="search-panel" role="group" aria-label="Common fragrance questions" hidden>
+      <p class="search-panel-title label-caps">Common questions</p>
+      <div class="search-questions">
+        <button type="button" class="search-q" data-filter="catalyst">A fresh, energizing scent for daytime</button>
+        <button type="button" class="search-q" data-filter="sensualist">A warm, cozy fragrance for evenings</button>
+        <button type="button" class="search-q" data-filter="philosopher">Something deep for late nights</button>
+        <button type="button" class="search-q" data-filter="solitary">A soft, clean scent that stays close</button>
+        <button type="button" class="search-q" data-filter="visionary">A bold fragrance that fills the room</button>
+        <button type="button" class="search-q" data-filter="all">Show me all five</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow"><span class="dot"></span>Haute Parfumerie · Recueil 2025</span>
+            <h1 class="text-display">
+              Scent As Second Skin:<br />
+              <span class="accent-italic">Fragrances Born From Who You Are</span>
+            </h1>
+            <p class="lede">
+              Formulations crafted not merely to perfume, but to commune with natural skin
+              chemistry — navigating the subtle gradient between crisp sunrise focus and
+              velvet midnight allure.
+            </p>
+            <div class="hero-ctas">
+              <a class="btn btn-primary" href="quiz.html">
+                Find Your Signature Scent
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn-secondary" href="#wardrobe">Explore the 2025 Collection</a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat"><strong>98.4%</strong><span>First-Bottle Match Rate</span></div>
+              <div class="hero-stat"><strong>100%</strong><span>Biodegradable Flacons</span></div>
+              <div class="hero-stat"><strong>28–40%</strong><span>Extrait Concentration</span></div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="frame">
+              <img src="assets/img/hero-flacon.png" alt="Luxury amber perfume bottle on a raw limestone pedestal in warm morning light" />
+            </div>
+            <div class="hero-card">
+              <div>
+                <span class="label-caps text-muted">Spotlight Extraction</span>
+                <p class="name">Ambre Minuit Extrait</p>
+              </div>
+              <span class="price">$145</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTES TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Smoked Amber <i class="sep">•</i> Velvet Fig <i class="sep">•</i> Bergamot Noir <i class="sep">•</i> Solar Sandalwood <i class="sep">•</i> Wild Iris Absolue <i class="sep">•</i> Petrified Cedar <i class="sep">•</i> Black Tea Distillate <i class="sep">•</i> Cardamom Pods of Mysore <i class="sep">•</i> Golden Frankincense <i class="sep">•</i></span>
+        <span>Smoked Amber <i class="sep">•</i> Velvet Fig <i class="sep">•</i> Bergamot Noir <i class="sep">•</i> Solar Sandalwood <i class="sep">•</i> Wild Iris Absolue <i class="sep">•</i> Petrified Cedar <i class="sep">•</i> Black Tea Distillate <i class="sep">•</i> Cardamom Pods of Mysore <i class="sep">•</i> Golden Frankincense <i class="sep">•</i></span>
+      </div>
+    </div>
+
+    <!-- WARDROBE -->
+    <section class="section" id="wardrobe">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <span class="label-caps kicker">Architectural Wardrobe</span>
+            <h2 class="text-headline-lg">Fragrance by Personality &amp; Self-Preference</h2>
+            <p>
+              Every bottle is calibrated around an authentic disposition. Select an archetype
+              to highlight formulas tuned to that chemical dialogue.
+            </p>
+          </div>
+          <span class="meta-note" id="filter-count" aria-live="polite">5 formulas shown</span>
+        </div>
+
+        <div class="chip-row" id="persona-filters" role="group" aria-label="Filter fragrances by archetype">
+          <button class="chip active" type="button" data-filter="all" aria-pressed="true">All Archetypes <small>(5)</small></button>
+          <button class="chip" type="button" data-filter="visionary" aria-pressed="false">The Visionary Rebel <small>(Amber &amp; Cedar)</small></button>
+          <button class="chip" type="button" data-filter="solitary" aria-pressed="false">The Quiet Solitary <small>(Iris &amp; White Tea)</small></button>
+          <button class="chip" type="button" data-filter="sensualist" aria-pressed="false">The Sensualist <small>(Plum &amp; Cashmere)</small></button>
+          <button class="chip" type="button" data-filter="catalyst" aria-pressed="false">The Free Catalyst <small>(Bergamot &amp; Cypress)</small></button>
+          <button class="chip" type="button" data-filter="philosopher" aria-pressed="false">The Midnight Philosopher <small>(Cardamom &amp; Resin)</small></button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+          <!-- Solaire 04 -->
+          <article class="product-card reveal" data-archetype="visionary">
+            <div class="card-media">
+              <img src="assets/img/product-solaire-04.png" alt="Solaire 04 perfume bottle in warm amber sunset shadows with dried cedar wood accents" loading="lazy" />
+              <div class="badge-stack">
+                <span class="badge">The Visionary Rebel</span>
+                <span class="badge sub">Golden Hour Transition</span>
+              </div>
+              <span class="price-tag">$145</span>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-title-row">
+                  <h3>Solaire 04</h3>
+                  <span class="conc">Extrait de Parfum</span>
+                </div>
+                <p>Bold amber resin sharpened with atlas cedar, radiating deliberate warmth and non-conformist sovereignty.</p>
+              </div>
+              <div class="pyramid">
+                <div class="pyramid-row"><span class="tier">Top</span><span class="notes">Bitter Blood Orange, Pink Peppercorn</span></div>
+                <div class="pyramid-row"><span class="tier">Heart</span><span class="notes">Smoked Amber, Golden Saffron</span></div>
+                <div class="pyramid-row"><span class="tier">Base</span><span class="notes">Virginian Cedarwood, Labdanum Resin</span></div>
+              </div>
+              <div class="gauges">
+                <div class="gauge">
+                  <div class="gauge-top"><span>Longevity</span><strong>10–12h</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:90%"></div></div>
+                </div>
+                <div class="gauge sillage">
+                  <div class="gauge-top"><span>Sillage</span><strong>Bold Presence</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:85%"></div></div>
+                </div>
+              </div>
+              <blockquote class="quote">
+                “It turns my quiet determination into an unmistakable room presence without screaming.”
+                <footer>— Clara M., Architect</footer>
+              </blockquote>
+              <div class="card-actions">
+                <button class="btn btn-primary" type="button">Add to Bag · $145</button>
+                <button class="btn btn-ghost" type="button">2ml Sample · $12</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Cuir Blanc -->
+          <article class="product-card reveal" data-archetype="solitary">
+            <div class="card-media">
+              <img src="assets/img/product-cuir-blanc.png" alt="Cuir Blanc frosted flacon against pale ceramic tiles with white tea leaves and iris petals" loading="lazy" />
+              <div class="badge-stack">
+                <span class="badge fig">The Quiet Solitary</span>
+                <span class="badge sub">Anytime Essential</span>
+              </div>
+              <span class="price-tag">$145</span>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-title-row">
+                  <h3>Cuir Blanc</h3>
+                  <span class="conc">Extrait de Parfum</span>
+                </div>
+                <p>An intimate second skin of Florentine iris, steamed white tea, and paper-thin white leather. Poised, contemplative, silent.</p>
+              </div>
+              <div class="pyramid">
+                <div class="pyramid-row"><span class="tier">Top</span><span class="notes">White Tea Steam, Green Angelica</span></div>
+                <div class="pyramid-row"><span class="tier">Heart</span><span class="notes">Florentine Iris Pallida, Rice Powder</span></div>
+                <div class="pyramid-row"><span class="tier">Base</span><span class="notes">Buffed White Suede, Clean Musk</span></div>
+              </div>
+              <div class="gauges">
+                <div class="gauge">
+                  <div class="gauge-top"><span>Longevity</span><strong>8–10h</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:78%"></div></div>
+                </div>
+                <div class="gauge sillage">
+                  <div class="gauge-top"><span>Sillage</span><strong>Intimate Halo</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:50%"></div></div>
+                </div>
+              </div>
+              <blockquote class="quote fig">
+                “Smells like reading first-edition poetry in an impeccably tidy gallery room. Pure peace.”
+                <footer>— Henri T., Novelist</footer>
+              </blockquote>
+              <div class="card-actions">
+                <button class="btn btn-primary" type="button">Add to Bag · $145</button>
+                <button class="btn btn-ghost" type="button">2ml Sample · $12</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Fumée Velours -->
+          <article class="product-card reveal" data-archetype="sensualist">
+            <div class="card-media">
+              <img src="assets/img/product-fumee-velours.png" alt="Fumée Velours plum-tinted bottle on crushed burgundy velvet with vanilla beans and caramelized figs" loading="lazy" />
+              <div class="badge-stack">
+                <span class="badge plum">The Sensualist</span>
+                <span class="badge sub">Intimate Evening</span>
+              </div>
+              <span class="price-tag">$145</span>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-title-row">
+                  <h3>Fumée Velours</h3>
+                  <span class="conc">Extrait de Parfum</span>
+                </div>
+                <p>Dark Damson plum laced with smoky vanilla orchid and tactile cashmere woods. Daring, tactile, and irresistibly magnetic.</p>
+              </div>
+              <div class="pyramid">
+                <div class="pyramid-row"><span class="tier">Top</span><span class="notes">Black Plum, Italian Davana</span></div>
+                <div class="pyramid-row"><span class="tier">Heart</span><span class="notes">Smoked Bourbon Orchid, Warm Cashmere</span></div>
+                <div class="pyramid-row"><span class="tier">Base</span><span class="notes">Roasted Tonka Bean, Benzoin Tear</span></div>
+              </div>
+              <div class="gauges">
+                <div class="gauge">
+                  <div class="gauge-top"><span>Longevity</span><strong>12h+</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:95%"></div></div>
+                </div>
+                <div class="gauge sillage">
+                  <div class="gauge-top"><span>Sillage</span><strong>Sensorial Wave</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:90%"></div></div>
+                </div>
+              </div>
+              <blockquote class="quote plum">
+                “Strangers actually pause to ask me what warmth I’m wearing. It feels like molten velvet.”
+                <footer>— Camille D., Curator</footer>
+              </blockquote>
+              <div class="card-actions">
+                <button class="btn btn-primary" type="button">Add to Bag · $145</button>
+                <button class="btn btn-ghost" type="button">2ml Sample · $12</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Nectar Sauvage -->
+          <article class="product-card reveal" data-archetype="catalyst">
+            <div class="card-media">
+              <img src="assets/img/product-nectar-sauvage.png" alt="Nectar Sauvage clear flacon on wet river stones with cypress needles and bergamot rind" loading="lazy" />
+              <div class="badge-stack">
+                <span class="badge amber">The Free Catalyst</span>
+                <span class="badge sub">Anytime Essential</span>
+              </div>
+              <span class="price-tag">$145</span>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-title-row">
+                  <h3>Nectar Sauvage</h3>
+                  <span class="conc">Extrait de Parfum</span>
+                </div>
+                <p>Sparkling Calabrian bergamot infused with wild Mediterranean cypress needles and luminous crushed fig wood.</p>
+              </div>
+              <div class="pyramid">
+                <div class="pyramid-row"><span class="tier">Top</span><span class="notes">Sunlit Bergamot, Crisp Petitgrain</span></div>
+                <div class="pyramid-row"><span class="tier">Heart</span><span class="notes">Green Cypress Leaf, Wild Fig Milk</span></div>
+                <div class="pyramid-row"><span class="tier">Base</span><span class="notes">Amberwood, Crisp Vetiver Root</span></div>
+              </div>
+              <div class="gauges">
+                <div class="gauge">
+                  <div class="gauge-top"><span>Longevity</span><strong>8–10h</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:80%"></div></div>
+                </div>
+                <div class="gauge sillage">
+                  <div class="gauge-top"><span>Sillage</span><strong>Crisp &amp; Lifted</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:70%"></div></div>
+                </div>
+              </div>
+              <blockquote class="quote amber">
+                “The sharpest, cleanest lift for morning strategy sessions. Electric without ever feeling synthetic.”
+                <footer>— Soren K., Product Designer</footer>
+              </blockquote>
+              <div class="card-actions">
+                <button class="btn btn-primary" type="button">Add to Bag · $145</button>
+                <button class="btn btn-ghost" type="button">2ml Sample · $12</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Ambre Minuit -->
+          <article class="product-card reveal" data-archetype="philosopher">
+            <div class="card-media">
+              <img src="assets/img/product-ambre-minuit.png" alt="Ambre Minuit obsidian flacon in a shadowed mahogany library with frankincense and cardamom" loading="lazy" />
+              <div class="badge-stack">
+                <span class="badge">The Midnight Philosopher</span>
+                <span class="badge sub">Intimate Evening</span>
+              </div>
+              <span class="price-tag">$145</span>
+            </div>
+            <div class="card-body">
+              <div>
+                <div class="card-title-row">
+                  <h3>Ambre Minuit</h3>
+                  <span class="conc">Extrait de Parfum</span>
+                </div>
+                <p>Cracked green cardamom pods resting on Omani frankincense, blackened leather, and aged golden amber tears.</p>
+              </div>
+              <div class="pyramid">
+                <div class="pyramid-row"><span class="tier">Top</span><span class="notes">Green Cardamom, Pimento Leaf</span></div>
+                <div class="pyramid-row"><span class="tier">Heart</span><span class="notes">Frankincense Tears, Cistus Flower</span></div>
+                <div class="pyramid-row"><span class="tier">Base</span><span class="notes">Blackened Amber, Smoked Myrrh</span></div>
+              </div>
+              <div class="gauges">
+                <div class="gauge">
+                  <div class="gauge-top"><span>Longevity</span><strong>12–14h</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:98%"></div></div>
+                </div>
+                <div class="gauge sillage">
+                  <div class="gauge-top"><span>Sillage</span><strong>Deep Enveloping</strong></div>
+                  <div class="gauge-track"><div class="gauge-fill" style="width:88%"></div></div>
+                </div>
+              </div>
+              <blockquote class="quote">
+                “Intoxicating yet cerebral. Worn when I need to think in deep quiet or converse until dawn.”
+                <footer>— Julian V., Epistemologist</footer>
+              </blockquote>
+              <div class="card-actions">
+                <button class="btn btn-primary" type="button">Add to Bag · $145</button>
+                <button class="btn btn-ghost" type="button">2ml Sample · $12</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coffret feature card -->
+          <article class="coffret-card reveal">
+            <div>
+              <span class="label-caps text-primary" style="display:block;margin-bottom:var(--space-sm);">The Complete Experience</span>
+              <h3>Haute Coffret: All 5 Archetypes</h3>
+              <p style="margin-top:var(--space-sm);">
+                Test each personality across your full biological cycle. Includes 5 × 2ml spray
+                vials in a hand-embossed linen presentation box with olfactory testing strips.
+              </p>
+              <div class="coffret-perk" style="margin-top:var(--space-md);">
+                <span class="perk-num">100%</span>
+                <div>
+                  <p class="text-title-md">Voucher Rebate</p>
+                  <p>The $45 coffret price applies completely to your first 50ml full flacon purchase.</p>
+                </div>
+              </div>
+            </div>
+            <div class="coffret-foot">
+              <button class="btn btn-primary btn-block" type="button">Claim Coffret · $45</button>
+              <span class="fine">Complimentary carbon-neutral dispatch</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ BANNER -->
+    <section class="section bg-sand">
+      <div class="container">
+        <div class="banner reveal">
+          <div class="banner-grid">
+            <div>
+              <span class="banner-eyebrow"><span class="dot"></span>98.4% Match Precision</span>
+              <h2 class="text-headline-lg">Uncertain where your chemistry leads?</h2>
+              <p class="banner-copy">
+                Take the 2-minute Scent Persona Quiz. We calibrate your olfactory profile against
+                emotional temperaments, daily routines, and thermal skin tendencies.
+              </p>
+            </div>
+            <div class="banner-panel">
+              <div>
+                <span class="label-caps text-primary">Question 1 of 4 · Quick Start</span>
+                <h3 style="margin-top:4px;">What sensation should your fragrance anchor first?</h3>
+              </div>
+              <div class="quick-options">
+                <button class="quick-option" type="button" data-val="fresh">
+                  A razor-sharp, invigorating clarity
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+                <button class="quick-option" type="button" data-val="calm">
+                  A meditative, clean sanctuary of calm
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+                <button class="quick-option" type="button" data-val="magnetic">
+                  A hypnotic, nocturnal magnetic pull
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </button>
+              </div>
+              <button class="btn btn-primary btn-block" id="quick-start-btn" type="button">Start the Full Diagnosis</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCIENCE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="label-caps kicker">Biochemical Dialogue</span>
+          <h2 class="text-headline-lg">The Science of Self &amp; Olfaction</h2>
+          <p>
+            Unlike synthetic commercial perfumery designed to mask, our non-linear extracts
+            actively react to body temperature, skin pH, and natural sebum.
+          </p>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0z"/></svg>
+            </div>
+            <div>
+              <span class="label-caps text-muted">Phase I · Kinetics</span>
+              <h3 style="margin-top:4px;">Thermal Metamorphosis</h3>
+            </div>
+            <p>
+              Each formula uses cold-extracted natural botanicals with unique boiling thresholds.
+              As your pulse points heat from morning movement to evening stillness, latent resins
+              awaken sequentially rather than dissipating uniformly.
+            </p>
+            <span class="foot">Evolution: 12-Hour Gradient</span>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon amber">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 2.7s6.5 7 6.5 11.3a6.5 6.5 0 1 1-13 0C5.5 9.7 12 2.7 12 2.7z"/></svg>
+            </div>
+            <div>
+              <span class="label-caps text-muted">Phase II · Chemistry</span>
+              <h3 style="margin-top:4px;">Lipidic Absorption</h3>
+            </div>
+            <p>
+              Our extracts are solubilized in unrefined organic jojoba and grape fractions that
+              bind directly to your lipidic mantle — no harsh alcohol prickle, just a warm
+              olfactory shadow uniquely yours.
+            </p>
+            <span class="foot">Purity: 0% Synthetic Fixatives</span>
+          </div>
+          <div class="feature-card reveal">
+            <div class="feature-icon fig">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </div>
+            <div>
+              <span class="label-caps text-muted">Phase III · Chronobiology</span>
+              <h3 style="margin-top:4px;">Circadian Harmony</h3>
+            </div>
+            <p>
+              Formulated to synchronize with diurnal shifts: crisp monoterpenes support morning
+              cognitive clarity, transitioning into calming ambers and sacred woods as dusk settles.
+            </p>
+            <span class="foot">Dynamic: Day-to-Dusk Balance</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUARANTEES -->
+    <section class="section bg-sand">
+      <div class="container">
+        <div class="guarantee-grid">
+          <div class="guarantee-item reveal">
+            <div class="feature-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <div>
+              <h4>Risk-Free Vial Companion</h4>
+              <p>Every 50ml flacon ships with an identical 2ml trial vial. Test on your pulse points for 7 days before unsealing the full bottle.</p>
+            </div>
+          </div>
+          <div class="guarantee-item reveal">
+            <div class="feature-icon amber">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 8h13v9H1z"/><path d="M14 11h4l3 3v3h-7z"/><circle cx="6" cy="19" r="1.6"/><circle cx="17.5" cy="19" r="1.6"/></svg>
+            </div>
+            <div>
+              <h4>Carbon-Neutral Dispatch</h4>
+              <p>Temperature-stabilized courier transport in plastic-free recycled pulp cartons, preserving raw molecular volatility from Grasse to your door.</p>
+            </div>
+          </div>
+          <div class="guarantee-item reveal">
+            <div class="feature-icon fig">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
+            </div>
+            <div>
+              <h4>Everlasting Flacon Refills</h4>
+              <p>Engineered with screw-threaded titanium neckpieces. Order sealed aluminum replenishment capsules at a permanent 30% reduction.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Épée &amp; Fluide</span>
+          <p>
+            Artisanal haute perfumery formulated in Grasse and refined in Paris. An olfactory
+            study in architectural structure, tactile emotion, and natural botanical absolutes.
+          </p>
+          <span class="fine">Crafted in small batches · Sustainable extraction</span>
+        </div>
+        <nav class="footer-col" aria-label="Shop links">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html#wardrobe">The Wardrobe</a></li>
+            <li><a href="quiz.html">Scent Persona Quiz</a></li>
+            <li><a href="about.html">The Atelier</a></li>
+            <li><a href="contact.html">Boutique Appointments</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Company links">
+          <h2>The Maison</h2>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#science">Formulation Science</a></li>
+            <li><a href="contact.html">Private Consultations</a></li>
+            <li><a href="contact.html">Care &amp; Maturation</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <div class="newsletter">
+            <h2>Join the Olfactory Gazette</h2>
+            <p>Receive invitations to private harvests, seasonal formulation previews, and a 10% welcome gift toward your inaugural Discovery Set.</p>
+            <form class="newsletter-form" novalidate>
+              <label class="skip-link" for="nl-email">Email address</label>
+              <input id="nl-email" type="email" placeholder="Enter your correspondence address" autocomplete="email" />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-msg" role="status"></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2025</span> Épée &amp; Fluide Parfums. All olfactory compositions registered and protected.</p>
+        <nav aria-label="Legal links">
+          <a href="contact.html">Legal Notice</a>
+          <a href="about.html#science">Formulation Transparency</a>
+          <a href="contact.html">Boutique Appointments</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

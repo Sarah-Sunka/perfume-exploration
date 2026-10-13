@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact the Atelier — Épée &amp; Fluide</title>
+  <meta name="description" content="Write to the Épée & Fluide atelier in Grasse, book a private consultation in Paris, or ask our perfumers anything about your match." />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Épée & Fluide — home">
+        <img src="assets/img/logo.png" alt="Épée & Fluide — Parfums de Soi" width="150" height="38" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="quiz.html">Scent Quiz</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <span class="status-pill"><span class="dot"></span>Matchmaker Active</span>
+        <button class="icon-btn" type="button" aria-label="Search fragrances" data-search-toggle aria-expanded="false" aria-controls="search-panel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="quiz.html">Scent Quiz</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <div class="search-panel" id="search-panel" role="group" aria-label="Common fragrance questions" hidden>
+      <p class="search-panel-title label-caps">Common questions</p>
+      <div class="search-questions">
+        <button type="button" class="search-q" data-filter="catalyst">A fresh, energizing scent for daytime</button>
+        <button type="button" class="search-q" data-filter="sensualist">A warm, cozy fragrance for evenings</button>
+        <button type="button" class="search-q" data-filter="philosopher">Something deep for late nights</button>
+        <button type="button" class="search-q" data-filter="solitary">A soft, clean scent that stays close</button>
+        <button type="button" class="search-q" data-filter="visionary">A bold fragrance that fills the room</button>
+        <button type="button" class="search-q" data-filter="all">Show me all five</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><span class="dot"></span>Correspondence · Consultations · Care</span>
+        <h1 class="text-display">
+          Write to the <span class="accent-italic">Atelier</span>
+        </h1>
+        <p class="lede">
+          Questions about your match, a refill, or a private appointment in Paris — every note
+          is read by a perfumer, not a machine. We reply within one business day.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+          <!-- FORM -->
+          <form class="contact-form" id="contact-form" novalidate>
+            <div>
+              <span class="label-caps text-primary">Your Note</span>
+              <h2 class="text-headline-md" style="margin-top:4px;">How may the atelier serve you?</h2>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="cf-name">Full name <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Solène Verlaine" aria-describedby="cf-name-error" />
+                <span class="error-msg" id="cf-name-error" role="alert"></span>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email address <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="cf-email-error" />
+                <span class="error-msg" id="cf-email-error" role="alert"></span>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="cf-topic">Topic <span class="req" aria-hidden="true">*</span></label>
+              <select id="cf-topic" name="topic" aria-describedby="cf-topic-error">
+                <option value="">Choose a topic…</option>
+                <option value="match">My scent match &amp; recommendations</option>
+                <option value="order">An existing order or refill</option>
+                <option value="consultation">Private consultation appointment</option>
+                <option value="press">Press &amp; partnerships</option>
+                <option value="other">Something else</option>
+              </select>
+              <span class="error-msg" id="cf-topic-error" role="alert"></span>
+            </div>
+
+            <div class="field">
+              <label for="cf-message">Your message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="cf-message" name="message" placeholder="Tell us about your skin chemistry, your routine, or the fragrance you are searching for…" aria-describedby="cf-message-error"></textarea>
+              <span class="error-msg" id="cf-message-error" role="alert"></span>
+            </div>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+
+            <button class="btn btn-primary" type="submit">
+              Send to the Atelier
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>
+            </button>
+            <p class="text-body-sm text-muted">
+              Your details are used only to answer your note. Private sensory encryption applies,
+              always.
+            </p>
+          </form>
+
+          <!-- INFO + FAQ -->
+          <div>
+            <div class="info-card">
+              <div class="info-row">
+                <div class="feature-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                </div>
+                <div>
+                  <h3>The Grasse Atelier</h3>
+                  <p>17 Chemin des Immortelles<br />06130 Grasse, France</p>
+                  <p style="margin-top:4px;"><a href="mailto:atelier@epee-fluide.fr">atelier@epee-fluide.fr</a></p>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="feature-icon amber">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+                </div>
+                <div>
+                  <h3>Telephone</h3>
+                  <p><a href="tel:+33493000000">+33 4 93 00 00 00</a><br />Tuesday – Saturday, 10h – 18h CET</p>
+                </div>
+              </div>
+              <div class="info-row">
+                <div class="feature-icon fig">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+                </div>
+                <div>
+                  <h3>Paris Salon</h3>
+                  <p>Private consultations by appointment only<br /><a href="quiz.html">Take the quiz first</a> and bring your archetype.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq">
+              <details class="faq-item">
+                <summary>
+                  How does the 2ml trial vial guarantee work?
+                  <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="faq-body">
+                  Every 50ml flacon ships with an identical 2ml vial. Wear it on your pulse points
+                  for up to 7 days. If the full flacon remains sealed, we refund it in full — no
+                  questions, no restocking fee.
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>
+                  How long until my order ships?
+                  <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="faq-body">
+                  Extraits are decanted to order and leave the atelier within 48 hours in
+                  temperature-stabilized, plastic-free cartons. Delivery is carbon-neutral and
+                  fully tracked.
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>
+                  Can I refill my flacon instead of rebuying?
+                  <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="faq-body">
+                  Yes — the titanium neckpiece unscrews. Sealed aluminum replenishment capsules
+                  cost 30% less than a new flacon, for the life of your bottle.
+                </div>
+              </details>
+              <details class="faq-item">
+                <summary>
+                  Is the quiz really free?
+                  <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="faq-body">
+                  Completely. Four questions, an instant archetype calculation, and no email
+                  required. We only ask for your address if you choose to subscribe to the Gazette.
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Épée &amp; Fluide</span>
+          <p>
+            Artisanal haute perfumery formulated in Grasse and refined in Paris. An olfactory
+            study in architectural structure, tactile emotion, and natural botanical absolutes.
+          </p>
+          <span class="fine">Crafted in small batches · Sustainable extraction</span>
+        </div>
+        <nav class="footer-col" aria-label="Shop links">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html#wardrobe">The Wardrobe</a></li>
+            <li><a href="quiz.html">Scent Persona Quiz</a></li>
+            <li><a href="about.html">The Atelier</a></li>
+            <li><a href="contact.html">Boutique Appointments</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Company links">
+          <h2>The Maison</h2>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#science">Formulation Science</a></li>
+            <li><a href="contact.html">Private Consultations</a></li>
+            <li><a href="contact.html">Care &amp; Maturation</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <div class="newsletter">
+            <h2>Join the Olfactory Gazette</h2>
+            <p>Receive invitations to private harvests, seasonal formulation previews, and a 10% welcome gift toward your inaugural Discovery Set.</p>
+            <form class="newsletter-form" novalidate>
+              <label class="skip-link" for="nl-email-4">Email address</label>
+              <input id="nl-email-4" type="email" placeholder="Enter your correspondence address" autocomplete="email" />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-msg" role="status"></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2025</span> Épée &amp; Fluide Parfums. All olfactory compositions registered and protected.</p>
+        <nav aria-label="Legal links">
+          <a href="contact.html">Legal Notice</a>
+          <a href="about.html#science">Formulation Transparency</a>
+          <a href="contact.html">Boutique Appointments</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

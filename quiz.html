@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scent Persona Quiz — Épée &amp; Fluide</title>
+  <meta name="description" content="Answer four questions about your energy, hours, textures, and sillage preference — we calculate your bespoke fragrance match." />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Épée & Fluide — home">
+        <img src="assets/img/logo.png" alt="Épée & Fluide — Parfums de Soi" width="150" height="38" />
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="quiz.html" aria-current="page">Scent Quiz</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <span class="status-pill"><span class="dot"></span>Matchmaker Active</span>
+        <button class="icon-btn" type="button" aria-label="Search fragrances" data-search-toggle aria-expanded="false" aria-controls="search-panel">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
+        <button class="icon-btn nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+      <a class="nav-link" href="index.html">Home</a>
+      <a class="nav-link" href="quiz.html" aria-current="page">Scent Quiz</a>
+      <a class="nav-link" href="about.html">About</a>
+      <a class="nav-link" href="contact.html">Contact</a>
+    </nav>
+
+    <div class="search-panel" id="search-panel" role="group" aria-label="Common fragrance questions" hidden>
+      <p class="search-panel-title label-caps">Common questions</p>
+      <div class="search-questions">
+        <button type="button" class="search-q" data-filter="catalyst">A fresh, energizing scent for daytime</button>
+        <button type="button" class="search-q" data-filter="sensualist">A warm, cozy fragrance for evenings</button>
+        <button type="button" class="search-q" data-filter="philosopher">Something deep for late nights</button>
+        <button type="button" class="search-q" data-filter="solitary">A soft, clean scent that stays close</button>
+        <button type="button" class="search-q" data-filter="visionary">A bold fragrance that fills the room</button>
+        <button type="button" class="search-q" data-filter="all">Show me all five</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- QUIZ HERO -->
+    <section class="quiz-hero">
+      <div class="container">
+        <span class="eyebrow">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+          Algorithmic Formulation · Grasse Synthesis
+        </span>
+        <h1 class="text-headline-lg text-primary">Decoding Your Olfactory DNA</h1>
+        <p class="lede">
+          Tell us how you move through the world, your favorite times of day, and emotional
+          energies — we will match you with your bespoke fragrance.
+        </p>
+        <div class="progress-card">
+          <div class="progress-meta">
+            <span class="label-caps phase" id="quiz-phase">Phase I of IV</span>
+            <span class="label-caps name" id="quiz-phase-name">Core Daily Energy</span>
+            <span class="label-caps pct" id="quiz-pct">25% Complete</span>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="quiz-progress"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ BODY -->
+    <section class="section">
+      <div class="container">
+        <div class="quiz-layout">
+          <div>
+            <!-- STEP 1 -->
+            <div class="quiz-step" data-name="Core Daily Energy">
+              <div class="quiz-step-head">
+                <span class="q-count">Question 01 / 04</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d9822b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <h2>What is your core daily energy?</h2>
+              <div class="quiz-options" data-question="energy">
+                <button class="quiz-opt" type="button" data-val="calm" data-archetype="solitary:2" aria-pressed="false">
+                  <span class="opt-title">Calm &amp; Grounded</span>
+                  <span class="opt-desc">Still water, quiet cedar rooms, centered resilience.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-val="magnetic" data-archetype="sensualist:2" aria-pressed="false">
+                  <span class="opt-title">Magnetic &amp; Provocative</span>
+                  <span class="opt-desc">Unspoken tension, nocturnal warmth, lingering gaze.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-val="fresh" data-archetype="catalyst:2" aria-pressed="false">
+                  <span class="opt-title">Fresh &amp; Dynamic</span>
+                  <span class="opt-desc">High velocity, mineral air, brisk momentum.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-val="mysterious" data-archetype="philosopher:2" aria-pressed="false">
+                  <span class="opt-title">Mysterious &amp; Contemplative</span>
+                  <span class="opt-desc">Velvet shadows, parchment archives, unspoken stories.</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="quiz-step" data-name="Authentic Hours" hidden>
+              <div class="quiz-step-head">
+                <span class="q-count">Question 02 / 04</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d9822b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+              </div>
+              <h2>When do you feel most authentically yourself?</h2>
+              <div class="quiz-options" data-question="time">
+                <button class="quiz-opt" type="button" data-archetype="solitary:2,catalyst:1" aria-pressed="false">
+                  <span class="opt-img"><img src="assets/img/quiz-time-dawn.png" alt="" /></span>
+                  <span class="opt-title">Dawn crisp mornings</span>
+                  <span class="opt-desc">Vulnerable clarity, untouched dew, first light.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="visionary:2,sensualist:1" aria-pressed="false">
+                  <span class="opt-img"><img src="assets/img/quiz-time-golden.png" alt="" /></span>
+                  <span class="opt-title">Golden hour afternoon</span>
+                  <span class="opt-desc">Sun-drenched warmth, lingering radiance.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="sensualist:2,philosopher:1" aria-pressed="false">
+                  <span class="opt-img"><img src="assets/img/quiz-time-twilight.png" alt="" /></span>
+                  <span class="opt-title">Twilight dinners</span>
+                  <span class="opt-desc">Laughter, deep wine, clinking crystal, close warmth.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="philosopher:2,visionary:1" aria-pressed="false">
+                  <span class="opt-img"><img src="assets/img/quiz-time-latenight.png" alt="" /></span>
+                  <span class="opt-title">Late night creative bursts</span>
+                  <span class="opt-desc">Intense focus, silence of the city, private obsessions.</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="quiz-step" data-name="Sensory Textures" hidden>
+              <div class="quiz-step-head">
+                <span class="q-count">Question 03 / 04</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#a2482b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h4v4H4zM10 4h4v4h-4zM16 4h4v4h-4zM4 10h4v4H4zM10 10h4v4h-4zM16 10h4v4h-4zM4 16h4v4H4zM10 16h4v4h-4zM16 16h4v4h-4z"/></svg>
+              </div>
+              <h2>Which sensory textures speak to you?</h2>
+              <div class="quiz-options" data-question="texture">
+                <button class="quiz-opt" type="button" data-archetype="visionary:2" aria-pressed="false">
+                  <span class="opt-kicker">Architectural Wood</span>
+                  <span class="opt-title">Heavy warm wool &amp; cedar</span>
+                  <span class="opt-desc">Coarse virgin wool spun over aromatic cedar sawdust and dry hearth smoke.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="solitary:2" aria-pressed="false">
+                  <span class="opt-kicker">Aquatic Mineral</span>
+                  <span class="opt-title">Crisp white linen &amp; sea spray</span>
+                  <span class="opt-desc">Salted breeze crashing upon bleached canvas sails and sun-bleached rocks.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="sensualist:2" aria-pressed="false">
+                  <span class="opt-kicker">Gourmand Leather</span>
+                  <span class="opt-title">Soft buttery suede &amp; roasted tonka</span>
+                  <span class="opt-desc">Tanned glove leather dusted in caramelized vanilla resin and dark almond paste.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="catalyst:2" aria-pressed="false">
+                  <span class="opt-kicker">Solar Botanical</span>
+                  <span class="opt-title">Sun-warmed citrus &amp; crushed leaves</span>
+                  <span class="opt-desc">Zesty bergamot peel ruptured between fingers amidst bitter fig stems.</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="quiz-step" data-name="Sillage Footprint" hidden>
+              <div class="quiz-step-head">
+                <span class="q-count">Question 04 / 04</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d9822b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 8c2.5-2 5.5-2 8 0s5.5 2 8 0 4-1.5 4 0M2 13c2.5-2 5.5-2 8 0s5.5 2 8 0 4-1.5 4 0M2 18c2.5-2 5.5-2 8 0s5.5 2 8 0 4-1.5 4 0"/></svg>
+              </div>
+              <h2>Preferred scent footprint (sillage)?</h2>
+              <div class="quiz-options single" data-question="sillage">
+                <button class="quiz-opt" type="button" data-archetype="solitary:2" aria-pressed="false">
+                  <span class="opt-title">Skin intimacy for me alone <span class="label-caps text-muted">Subtle</span></span>
+                  <span class="opt-desc">A private whisper that lives strictly within your personal perimeter.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="visionary:1,philosopher:1" aria-pressed="false">
+                  <span class="opt-title">A gentle halo noticed upon embrace <span class="label-caps text-primary">Balanced</span></span>
+                  <span class="opt-desc">Radiates an arm's length. Draws admirers inward without overpowering.</span>
+                </button>
+                <button class="quiz-opt" type="button" data-archetype="sensualist:2,catalyst:1" aria-pressed="false">
+                  <span class="opt-title">A bold unforgettable trail <span class="label-caps" style="color:#8f4e00;">Expansive</span></span>
+                  <span class="opt-desc">Announces your arrival and leaves an ethereal signature after departure.</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- NAV -->
+            <div class="quiz-nav">
+              <button class="btn btn-secondary" id="quiz-prev" type="button">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+                Previous
+              </button>
+              <div class="step-dots" role="group" aria-label="Quiz progress">
+                <button class="step-dot current" type="button" aria-label="Go to question 1">1</button>
+                <button class="step-dot" type="button" aria-label="Go to question 2">2</button>
+                <button class="step-dot" type="button" aria-label="Go to question 3">3</button>
+                <button class="step-dot" type="button" aria-label="Go to question 4">4</button>
+              </div>
+              <button class="btn btn-primary" id="quiz-next" type="button">
+                <span class="btn-label">Next Phase</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </div>
+
+            <div class="quiz-guarantee">
+              <div class="feature-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.9 4.6L18 9.2l-4.1 1.6L12 15.4l-1.9-4.6L6 9.2l4.1-1.6z"/><path d="m19 14 .9 2.1 2.1.9-2.1.9-.9 2.1-.9-2.1-2.1-.9 2.1-.9z"/></svg>
+              </div>
+              <div>
+                <p class="text-title-md">100% Formulation Calibration Guarantee</p>
+                <p>Every full flacon order includes a complimentary 2ml matching sample. Experience the formula on your skin first; return the unopened flacon for a full refund if not utterly entranced.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- LIVE MATCH PANEL -->
+          <aside class="match-panel" id="match-panel" aria-live="polite">
+            <div class="match-head">
+              <span class="match-live"><span class="dot"></span>Live Archetype Match</span>
+              <span class="match-score" id="match-score">90% Synergy Score</span>
+            </div>
+            <div class="match-archetype">
+              <span class="k">Calculated Archetype</span>
+              <h3 id="match-archetype">The Amber Visionary</h3>
+              <p id="match-desc">Bold amber resin sharpened with atlas cedar, radiating deliberate warmth and non-conformist sovereignty.</p>
+            </div>
+            <div class="match-product">
+              <div class="bottle">
+                <img id="match-img" src="assets/img/product-solaire-04.png" alt="Solaire 04 perfume flacon" />
+              </div>
+              <div>
+                <span class="k">Extrait de Parfum · 50ml</span>
+                <h4 id="match-product">Solaire 04</h4>
+                <span class="price" id="match-price">$145 USD</span>
+              </div>
+            </div>
+            <div>
+              <span class="label-caps text-muted" style="display:block;margin-bottom:6px;">Olfactory Harmony Breakdown</span>
+              <div class="match-notes" id="match-notes"></div>
+            </div>
+            <div class="match-matrix">
+              <span class="k">Suitability Matrix</span>
+              <div class="matrix-row">
+                <div class="row-top"><span>Day Wear Resonance</span><strong>90%</strong></div>
+                <div class="gauge-track"><div class="gauge-fill" style="width:90%"></div></div>
+              </div>
+              <div class="matrix-row amber">
+                <div class="row-top"><span>Evening Allure &amp; Trail</span><strong>98%</strong></div>
+                <div class="gauge-track"><div class="gauge-fill" style="width:98%"></div></div>
+              </div>
+              <div class="matrix-season">
+                <span>Seasonality Adaptation</span>
+                <span class="season-tag">All-Season Transcendent</span>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:var(--space-sm);">
+              <button class="btn btn-primary btn-block" id="match-buy" type="button">Claim My Scent Match — $145</button>
+              <button class="btn btn-secondary btn-block" type="button">Try the 5-Piece Sample Box — $35</button>
+              <button class="btn btn-ghost btn-block" id="quiz-reset" type="button">Take Quiz Again from Start</button>
+            </div>
+            <div class="match-trust">
+              <span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#a2482b" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="1"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+                Private sensory encryption
+              </span>
+              <span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8f4e00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8v8l-9 5-9-5V8"/><path d="m3 8 9-5 9 5-9 5z"/></svg>
+                Carbon-neutral dispatch
+              </span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section bg-sand">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <span class="label-caps kicker">Matched Olfactory Journeys</span>
+            <h2 class="text-headline-lg">Voices of the Matched Shoppers</h2>
+            <p>Real observations from fragrance collectors who took our persona diagnostic and found their definitive signature flacon.</p>
+          </div>
+          <span class="rating-pill">
+            <span class="stars" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+            </span>
+            4.92 / 5.0 Global Rating
+          </span>
+        </div>
+
+        <div class="testimonial-grid">
+          <article class="testimonial-card reveal">
+            <div>
+              <div class="t-head">
+                <span class="stars" aria-label="5 out of 5 stars">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                </span>
+                <span class="t-verified">Verified Collector</span>
+              </div>
+              <h3 style="margin-top:var(--space-sm);">“Astonishingly accurate. Fumée Velours is now an extension of my pulse.”</h3>
+              <p class="t-body" style="margin-top:var(--space-sm);">
+                I was deeply skeptical about an online perfume algorithm. Most recommend generic
+                vanillas. This quiz identified my craving for roasted suede and amber resin down
+                to the molecule. People stop me at galleries to ask what I am wearing.
+              </p>
+            </div>
+            <div class="testimonial-person">
+              <img src="assets/img/avatar-camille.png" alt="Portrait of Camille de la Tour" loading="lazy" />
+              <div>
+                <span class="p-name">Camille de la Tour</span>
+                <span class="p-match">Matched: The Amber Visionary</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div>
+              <div class="t-head">
+                <span class="stars" aria-label="5 out of 5 stars">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                </span>
+                <span class="t-verified">Verified Collector</span>
+              </div>
+              <h3 style="margin-top:var(--space-sm);">“The transition from cedar smoke into sweet tonka is seamless perfection.”</h3>
+              <p class="t-body" style="margin-top:var(--space-sm);">
+                The quiz picked up on my nocturnal work habits and grounded energy. The flacon
+                feels heavy and artisanal, and the trial vial concept gives absolute peace of
+                mind. I opened the main bottle within fifteen minutes of unboxing.
+              </p>
+            </div>
+            <div class="testimonial-person">
+              <img src="assets/img/avatar-julian.png" alt="Portrait of Julian S. Vance" loading="lazy" />
+              <div>
+                <span class="p-name">Julian S. Vance</span>
+                <span class="p-match">Matched: Fumée Velours</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div>
+              <div class="t-head">
+                <span class="stars" aria-label="5 out of 5 stars">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7L5.8 21l1.6-7L2 9.3l7.1-.7z"/></svg>
+                </span>
+                <span class="t-verified">Verified Collector</span>
+              </div>
+              <h3 style="margin-top:var(--space-sm);">“I discarded three designer fragrances after finding this match.”</h3>
+              <p class="t-body" style="margin-top:var(--space-sm);">
+                The sillage metric was what won me over — it does not suffocate the room like
+                commercial fragrances, but creates this enchanting intimate halo. It feels
+                tailored, bespoke, and intimately mine.
+              </p>
+            </div>
+            <div class="testimonial-person">
+              <img src="assets/img/avatar-elena.png" alt="Portrait of Dr. Elena Moreau" loading="lazy" />
+              <div>
+                <span class="p-name">Dr. Elena Moreau</span>
+                <span class="p-match">Matched: The Amber Visionary</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="coffret-strip reveal" style="margin-top:var(--space-lg);">
+          <div style="display:flex;align-items:center;gap:var(--space-md);flex-wrap:wrap;">
+            <span class="strip-brand" aria-hidden="true">É</span>
+            <div>
+              <p class="text-title-lg">Curious to test the entire olfactory spectrum first?</p>
+              <p class="text-body-sm text-muted">Order the complete 5-Flacon Atelier Exploration Coffret. Your $45 purchase is fully credited toward your subsequent full bottle.</p>
+            </div>
+          </div>
+          <a class="btn btn-secondary" href="index.html#wardrobe">Explore Coffrets</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">Épée &amp; Fluide</span>
+          <p>
+            Artisanal haute perfumery formulated in Grasse and refined in Paris. An olfactory
+            study in architectural structure, tactile emotion, and natural botanical absolutes.
+          </p>
+          <span class="fine">Crafted in small batches · Sustainable extraction</span>
+        </div>
+        <nav class="footer-col" aria-label="Shop links">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="index.html#wardrobe">The Wardrobe</a></li>
+            <li><a href="quiz.html">Scent Persona Quiz</a></li>
+            <li><a href="about.html">The Atelier</a></li>
+            <li><a href="contact.html">Boutique Appointments</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Company links">
+          <h2>The Maison</h2>
+          <ul>
+            <li><a href="about.html">Our Story</a></li>
+            <li><a href="about.html#science">Formulation Science</a></li>
+            <li><a href="contact.html">Private Consultations</a></li>
+            <li><a href="contact.html">Care &amp; Maturation</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <div class="newsletter">
+            <h2>Join the Olfactory Gazette</h2>
+            <p>Receive invitations to private harvests, seasonal formulation previews, and a 10% welcome gift toward your inaugural Discovery Set.</p>
+            <form class="newsletter-form" novalidate>
+              <label class="skip-link" for="nl-email-2">Email address</label>
+              <input id="nl-email-2" type="email" placeholder="Enter your correspondence address" autocomplete="email" />
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-msg" role="status"></p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span data-year>2025</span> Épée &amp; Fluide Parfums. All olfactory compositions registered and protected.</p>
+        <nav aria-label="Legal links">
+          <a href="contact.html">Legal Notice</a>
+          <a href="about.html#science">Formulation Transparency</a>
+          <a href="contact.html">Boutique Appointments</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
